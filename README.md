@@ -1,4 +1,4 @@
-# LatexToMSWord
+# tex2docx
 
 简体中文 | [English](README.en.md)
 
