@@ -23,8 +23,9 @@ complete IEEE manuscript (24 numbered equations, 19 figures, 7 tables,
 
 ## Requirements
 
-- [pandoc](https://pandoc.org/installing.html) 2.11+ (on `PATH`, or point the
-  `PANDOC` environment variable at the executable)
+- [pandoc](https://pandoc.org/installing.html) 3.0+ (on `PATH`, or point the
+  `PANDOC` environment variable at the executable; the AST filter relies on
+  the pandoc 3 document AST)
 - Python 3.10+ with two packages:
 
   ```bash
@@ -34,7 +35,7 @@ complete IEEE manuscript (24 numbered equations, 19 figures, 7 tables,
 ## Usage
 
 ```bash
-python convert.py manuscript/tex/manuscript.tex -o manuscript.docx
+python convert.py path/to/manuscript.tex -o output.docx
 ```
 
 `convert.py` runs a four-stage pipeline:
@@ -71,7 +72,7 @@ preprocess.py            stage 1: LaTeX normalization + label manifest
 filter_latex2docx.py     stage 3: pandoc AST post-processing (panflute)
 template.docx            Word style template (reference-doc)
 ieee.csl                 IEEE citation style for citeproc
-manuscript/              sample IEEE manuscript used for testing
+manuscript/              local test manuscripts (git-ignored, not distributed)
 bash.sh / bash.bat       thin wrappers around convert.py
 ```
 

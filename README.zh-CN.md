@@ -12,7 +12,7 @@
 
 ## 环境要求
 
-- [pandoc](https://pandoc.org/installing.html) 2.11 及以上(加入 `PATH`,或通过 `PANDOC` 环境变量指向可执行文件)
+- [pandoc](https://pandoc.org/installing.html) 3.0 及以上(加入 `PATH`,或通过 `PANDOC` 环境变量指向可执行文件;AST 过滤器依赖 pandoc 3 的文档结构)
 - Python 3.10+,外加两个依赖包:
 
   ```bash
@@ -22,7 +22,7 @@
 ## 使用方法
 
 ```bash
-python convert.py manuscript/tex/manuscript.tex -o manuscript.docx
+python convert.py path/to/manuscript.tex -o output.docx
 ```
 
 `convert.py` 运行四段管线:

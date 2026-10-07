@@ -13,7 +13,7 @@ panflute and pymupdf (``pip install panflute pymupdf``).
 
 Usage
 -----
-    python convert.py manuscript/tex/manuscript.tex -o manuscript.docx
+    python convert.py path/to/manuscript.tex -o output.docx
 """
 
 from __future__ import annotations
