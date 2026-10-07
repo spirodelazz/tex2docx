@@ -1,6 +1,4 @@
-pandoc ./beamformer_framework_pandoc.tex -f latex+raw_tex  \
-    --citeproc --bibliography paper/ref.bib \
-    -F ./pandoc-vanvliet.py \
-    --resource-path ./paper \
-    --reference-doc template.docx \
-    -o beamformer_framework.docx
+#!/usr/bin/env bash
+# LatexToMSWord: one-command LaTeX -> Word conversion.
+# Usage: ./bash.sh manuscript/tex/manuscript.tex -o output.docx
+exec python "$(dirname "$0")/convert.py" "$@"

@@ -35,3 +35,14 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
+
+### LatexToMSWord ###
+# intermediate pipeline files
+build/
+# private manuscripts and converted outputs -- never commit these
+manuscript/
+/*.docx
+!template.docx
+# PNG files rasterized from PDF figures by the filter
+manuscript/tex/*.png
+paper/*.png
