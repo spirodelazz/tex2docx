@@ -1,8 +1,25 @@
 # LatexToMSWord
 
+English | [简体中文](README.zh-CN.md)
+
 One-command conversion of a LaTeX manuscript (IEEE style and similar) to a
 Word (.docx) document, keeping tables, equations, figures, algorithms and
 citations intact.
+
+## About
+
+Turning a LaTeX manuscript into the Word copy that many journals require
+means re-typesetting every equation, re-inserting every figure and
+re-numbering every float by hand. This project wraps the whole job into a
+**single command**: pandoc does the heavy lifting of LaTeX -> Word, and a
+panflute-based AST filter adds what pandoc cannot do on its own — figure and
+table numbering with cross-reference resolution, PDF figure rasterization,
+and the IEEE-specific structures (title block, abstract, keywords, author
+biographies).
+
+Built out of a real submission need and validated end-to-end against a
+complete IEEE manuscript (24 numbered equations, 19 figures, 7 tables,
+5 algorithms, 3 author biographies) with zero warnings.
 
 ## Requirements
 
