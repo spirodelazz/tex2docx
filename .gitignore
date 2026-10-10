@@ -45,4 +45,5 @@ manuscript/
 !template.docx
 # PNG files rasterized from PDF figures by the filter
 manuscript/tex/*.png
-paper/*.png
+# working manuscripts: no file type under paper/ belongs in the repo
+paper/
